@@ -339,7 +339,7 @@ ul ul li{
 <a class="sourceLine" id="cb20-12" data-line-number="12">                      <span class="dt">silent=</span><span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb20-13" data-line-number="13">                      <span class="dt">recfunc=</span>HS.recAR, <span class="co"># 再生産関係の関数</span></a>
 <a class="sourceLine" id="cb20-14" data-line-number="14">                      <span class="co"># recfuncに対する引数</span></a>
-<a class="sourceLine" id="cb20-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>b,</a>
+<a class="sourceLine" id="cb20-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>b,<span class="dt">rho=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>rho,</a>
 <a class="sourceLine" id="cb20-16" data-line-number="16">                                   <span class="dt">sd=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>sd,<span class="dt">resid=</span>HS.par0<span class="op">$</span>resid))</a></code></pre></div>
 <figure>
 <img src="figure/future.vpa-1.png" alt="図：is.plot=TRUEで表示される図．資源量(Biomass)，親魚資源量(SSB), 漁獲量(Catch)の時系列．決定論的将来予測（Deterministic），平均値（Mean），中央値(Median)，80％信頼区間を表示" /><figcaption><strong>図：is.plot=TRUEで表示される図．資源量(Biomass)，親魚資源量(SSB), 漁獲量(Catch)の時系列．決定論的将来予測（Deterministic），平均値（Mean），中央値(Median)，80％信頼区間を表示</strong></figcaption>
@@ -359,7 +359,7 @@ ul ul li{
 <a class="sourceLine" id="cb21-12" data-line-number="12">                      <span class="dt">silent=</span><span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb21-13" data-line-number="13">                      <span class="dt">recfunc=</span>BH.recAR, <span class="co"># 再生産関係の関数</span></a>
 <a class="sourceLine" id="cb21-14" data-line-number="14">                      <span class="co"># recfuncに対する引数</span></a>
-<a class="sourceLine" id="cb21-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>b,</a>
+<a class="sourceLine" id="cb21-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>b,<span class="dt">rho=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>rho,</a>
 <a class="sourceLine" id="cb21-16" data-line-number="16">                                   <span class="dt">sd=</span>BH.par0<span class="op">$</span>pars<span class="op">$</span>sd,<span class="dt">resid=</span>BH.par0<span class="op">$</span>resid))</a></code></pre></div>
 <figure>
 <img src="figure/future.vpa2-1.png" alt="図：is.plot=TRUEで表示される図．資源量(Biomass)，親魚資源量(SSB), 漁獲量(Catch)の時系列．決定論的将来予測（Deterministic），平均値（Mean），中央値(Median)，80％信頼区間を表示" /><figcaption><strong>図：is.plot=TRUEで表示される図．資源量(Biomass)，親魚資源量(SSB), 漁獲量(Catch)の時系列．決定論的将来予測（Deterministic），平均値（Mean），中央値(Median)，80％信頼区間を表示</strong></figcaption>
@@ -461,10 +461,10 @@ ul ul li{
 <a class="sourceLine" id="cb25-12" data-line-number="12">                      <span class="dt">Frec=</span><span class="kw">list</span>(<span class="dt">stochastic=</span><span class="ot">TRUE</span>,<span class="dt">future.year=</span><span class="dv">2023</span>,<span class="dt">Blimit=</span><span class="kw">rev</span>(<span class="kw">colSums</span>(res.pma<span class="op">$</span>ssb))[<span class="dv">1</span>],<span class="dt">scenario=</span><span class="st">&quot;blimit&quot;</span>,<span class="dt">target.probs=</span><span class="dv">50</span>),</a>
 <a class="sourceLine" id="cb25-13" data-line-number="13">                      <span class="dt">recfunc=</span>HS.recAR, <span class="co"># 再生産関係の関数</span></a>
 <a class="sourceLine" id="cb25-14" data-line-number="14">                      <span class="co"># recfuncに対する引数</span></a>
-<a class="sourceLine" id="cb25-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>b,</a>
+<a class="sourceLine" id="cb25-15" data-line-number="15">                      <span class="dt">rec.arg=</span><span class="kw">list</span>(<span class="dt">a=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>a,<span class="dt">b=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>b,<span class="dt">rho=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>rho,</a>
 <a class="sourceLine" id="cb25-16" data-line-number="16">                                   <span class="dt">sd=</span>HS.par0<span class="op">$</span>pars<span class="op">$</span>sd,<span class="dt">bias.corrected=</span><span class="ot">TRUE</span>))</a></code></pre></div>
 <pre><code>## F multiplier=  0.8 seed= 1 
-## F multiplier= 1.05842</code></pre>
+## F multiplier= 1.03432</code></pre>
 <figure>
 <img src="figure/unnamed-chunk-9-1.png" alt="Frecオプションを使った場合は、結果の図に目的とする年・資源量のところに赤線が入ります。これが将来予測の結果と一致しているか確かめてください。もし一致していない場合、multi（初期値）かFrecのオプションのFrangeを指定してやり直してください" /><figcaption>Frecオプションを使った場合は、結果の図に目的とする年・資源量のところに赤線が入ります。これが将来予測の結果と一致しているか確かめてください。もし一致していない場合、multi（初期値）かFrecのオプションのFrangeを指定してやり直してください</figcaption>
 </figure>
@@ -609,7 +609,7 @@ ul ul li{
 <a class="sourceLine" id="cb33-2" data-line-number="2">MSY.HS &lt;-<span class="st"> </span><span class="kw">est.MSY</span>(res.pma, <span class="co"># VPAの計算結果</span></a>
 <a class="sourceLine" id="cb33-3" data-line-number="3">                 fres.HS<span class="op">$</span>input, <span class="co"># 将来予測で使用した引数</span></a>
 <a class="sourceLine" id="cb33-4" data-line-number="4"><span class="co">#                 nyear=NULL, # 何年計算するかは、指定しなければ関数内部で世代時間の20倍の年数を計算し、それを平衡状態とする</span></a>
-<a class="sourceLine" id="cb33-5" data-line-number="5">                 <span class="dt">N=</span><span class="dv">100</span>, <span class="co"># 将来予測の年数，繰り返し回数</span></a>
+<a class="sourceLine" id="cb33-5" data-line-number="5">                 <span class="dt">N=</span><span class="dv">100</span>, <span class="co"># 将来予測の繰り返し回数</span></a>
 <a class="sourceLine" id="cb33-6" data-line-number="6">                 <span class="dt">PGY=</span><span class="kw">c</span>(<span class="fl">0.9</span>,<span class="fl">0.6</span>,<span class="fl">0.1</span>), <span class="co"># 計算したいPGYレベル。上限と下限の両方が計算される</span></a>
 <a class="sourceLine" id="cb33-7" data-line-number="7">                 <span class="dt">onlylower.pgy=</span><span class="ot">FALSE</span>, <span class="co"># TRUEにするとPGYレベルの上限は計算しない（計算時間の節約になる）</span></a>
 <a class="sourceLine" id="cb33-8" data-line-number="8">                 <span class="dt">B0percent=</span><span class="kw">c</span>(<span class="fl">0.3</span>,<span class="fl">0.4</span>)) <span class="co"># 計算したいB0%レベル</span></a></code></pre></div>
